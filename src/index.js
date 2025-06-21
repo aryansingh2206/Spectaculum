@@ -5,7 +5,12 @@ import express from "express";
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
 
-dotenv.config(); // ✅ no path needed, loads .env by default
+dotenv.config() // ✅ no path needed, loads .env by default
+console.log("✅ Cloudinary ENV Test:", {
+  CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+  API_KEY: process.env.CLOUDINARY_API_KEY,
+  API_SECRET: process.env.CLOUDINARY_API_SECRET
+});
 
 
 connectDB()
